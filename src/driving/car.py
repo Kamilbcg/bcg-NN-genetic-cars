@@ -7,7 +7,7 @@ from driving.utils import randfloat
 
 
 class Car3(object):
-    def __init__(self, pos=(0, 0), theta=0, speed=1, direction_size=20):
+    def __init__(self, pos=(0, 0), theta=0, speed=5, direction_size=20):
         self.pos = pos
         self.theta = theta
         self.point = Point(pos)
