@@ -49,8 +49,7 @@ And for each of the (assuming a generation of 100 cars), 9 children will be crea
 each children will have one neuron, randomly selected, from any of the layers, that will be modified. 
 
 ## Results
-[generation_0_run.html](data/animations/generation_0_run.html)
-
+[generation_0_run.html](images/generation_0_run.html)
 
 
 
