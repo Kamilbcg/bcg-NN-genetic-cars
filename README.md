@@ -50,7 +50,7 @@ each children will have one neuron, randomly selected, from any of the layers, t
 
 ## Results
 ### Generation 0
-At generation 0, the last carz get stuck at the first turn.![generation 0.png](images/generation 0.png)
+At generation 0, the last carz get stuck at the first turn.![generation 0.png](images/generation_00.png)
 [generation_0_run.html](images/generation_0_run.html)
 ### Generation 1
 At generation 1, the last car get stuck midway.![generation 1.png](images/generation_23.png)
