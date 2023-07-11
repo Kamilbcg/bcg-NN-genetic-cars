@@ -49,7 +49,33 @@ And for each of the (assuming a generation of 100 cars), 9 children will be crea
 each children will have one neuron, randomly selected, from any of the layers, that will be modified. 
 
 ## Results
+### Generation 0
+At generation 0, the last carz get stuck at the first turn.![generation 0.png](images/generation 0.png)
 [generation_0_run.html](images/generation_0_run.html)
+### Generation 1
+At generation 1, the last car get stuck midway.![generation 1.png](images/generation_23.png)
+[generation_1_run.html](images/generation_1_run.html)
+
+### Generation 5
+At generation 5 more cars get to that step.![generation 5.png](images/generation_4.png)
+[generation_5_run.html](images/generation_5_run.html)
+
+### Generation 18
+At generation 18, one car is able to get past that stuck point.
+![generation 18.png](images/generation_1.png)
+[generation_18_run.html](images/generation_18_run.html)
+
+### Generation 23
+At generation 23, one car is able to finish the route.
+![generation 23.png](images/generation_0.png)
+[generation_23_run.html](images/generation_23_run.html)
+
+
+
+
+
+
+
 
 
 
