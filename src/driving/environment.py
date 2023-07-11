@@ -8,9 +8,9 @@ from driving.route import Route
 
 
 class Environment(object):
-    def __init__(self, nb_cars=1):
+    def __init__(self, nb_cars=1, n_points=200, width=20):
         self.nb_cars = nb_cars
-        self.route = Route(n_points=100, width=20, max_theta_change=np.pi / 6)
+        self.route = Route(n_points=n_points, width=width, max_theta_change=np.pi / 6)
         self.cars = [
             Car3(theta=self.route.initial_theta, speed=5) for i in range(self.nb_cars)
         ]
@@ -134,7 +134,10 @@ class Environment(object):
                 "alive": self.route.polygon.contains(car.point),
             }
 
-        while self._get_nb_cars_in() > 0 and T < T_max:
+        while (
+            sum([dict_pos[T][idx]["alive"] for idx in dict_pos[T].keys()]) > 0
+            and T < T_max
+        ):
             T += 1
             dict_pos[T] = {}
             for idx, car in enumerate(self.cars):
@@ -146,10 +149,6 @@ class Environment(object):
                     }
                 else:
                     dict_pos[T][idx] = {"alive": False, "position": car.pos}
-                    # self.cars.remove(car)
-            # self.plot_UI()
-            # self.UI.show()
-            # plt.close()
         return dict_pos
 
     def select_best_cars(self, n_best=10):
