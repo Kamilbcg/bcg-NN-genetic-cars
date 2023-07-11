@@ -22,10 +22,10 @@ if __name__ == "__main__":
     route_width = st.sidebar.slider("Route width", 10, 50, 10)
 
     # Add button to select number of cars
-    nb_cars = st.sidebar.slider("Number of cars", 50, 200, 50)
+    nb_cars = st.sidebar.slider("Number of cars", 50, 2000, 50)
 
     # Add button to select number of generations
-    nb_gen = st.sidebar.slider("Number of generations", 10, 100, 10)
+    nb_gen = st.sidebar.slider("Number of generations", 1, 100, 10)
 
     # Add button to select number timesteps before simulation stops
     T_max = st.sidebar.slider("Maximum number of timesteps", 100, 1000, 100)
@@ -55,6 +55,7 @@ if __name__ == "__main__":
             else:
                 continue
 
+
     dict_pos = {}
     for g in range(nb_gen):
         if g>0:
@@ -79,6 +80,7 @@ if __name__ == "__main__":
         st.write(f"Max fitness: {max(env.fitnesses())}")
 
         fig = plot_animated_race(env, df, g)
+        fig.write_html(f"data/animations/generation_{g}_run.html")
         st.plotly_chart(fig)
 
 
